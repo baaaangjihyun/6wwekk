@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Pixelify+Sans:wght@400;500&family=Playfair+Display&family=Song+Myung&display=swap" rel="stylesheet">
+
+    <style type="text/css">
+        body {margin: 0px;}
+        font-family: 'Pixelify Sans', sans-serif;
+
+        .background1 {height: 200px; width: 1500px; margin: auto;}
+        .main {font-family: 'Pixelify Sans', sans-serif; text-align: center; font-size: 60px; padding-top: 13px;}
+
+        .background2 {
+            height: 590px;
+            width: 1500px;
+            margin: auto;
+            background-image: url('back.jpg');
+            background-repeat: no-repeat;
+            background-position: center top;
+        }
+        .content { display: flex; justify-content: space-between; margin: 3px;}
+        .square {
+            width: 95px;
+            height: 95px;
+            background-color: #D9D9D9;
+            margin-right: 3px;
+            cursor: pointer;
+        }
+
+        #text-input {
+            width: 100px;
+            height: 50px;
+            border: 5px solid black;
+            margin-top: 0px;
+        }
+
+        #solution-button {
+            display: none; /* 초기에는 숨김 */
+        }
+
+        #solution-image {
+            display: none; /* 초기에는 숨김 */
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <section class="background1">
+        <div class="main" style="height: 120px;">
+            Let 's break now
+        </div>
+    </section>
+    <section class="background2">
+        <div class="content">
+            <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div>
+        </div>
+
+        <div class="content">
+            <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div>
+    
+        </div>
+
+            <div class="content">
+            <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div>
+        </div>
+
+        <div class="content">
+            <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div>
+            
+        </div>
+
+        <div class="content">
+            <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div>
+        </div>
+
+        <div class="content">
+            <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div> <div class="square" onclick="changeColor(this)"></div>
+        </div>
+
+        <section class="right">
+            <div class="main" style="margin: 30px;">
+                <label for="text-input"> ? = </label>
+                <input type="text" id="text-input" name="text-input" style="height: 50px; border: 5px solid black; margin-top: 10px;">
+                <button onclick="checkAnswer()">확인</button>
+                <p id="result" style="font-family: 'Pixelify Sans', sans-serif; font-size: 50px;"></p>
+                <button id="solution-button" onclick="showSolution()" style="margin:auto;">풀이보기</button>
+                <img id="solution-image" src="back2.jpg" alt="풀이 이미지">
+            </div>
+        </section>
+
+        <script>
+            var squares = document.querySelectorAll('.square');
+
+            var colors = ['#B4B4B4', '#757575', '#272727'];
+
+            squares.forEach(function(square) {
+                var clickCounter = 0;
+
+                square.addEventListener('click', function() {
+                    if (clickCounter < 3) {
+                        this.style.backgroundColor = colors[clickCounter];
+                        clickCounter++;
+                    } else {
+                        this.style.opacity = '0';
+                        this.style.pointerEvents = 'none';
+                    }
+                });
+            });
+
+            function checkAnswer() {
+                var userInput = document.getElementById("text-input").value;
+                var resultElement = document.getElementById("result");
+                var solutionButton = document.getElementById("solution-button");
+
+                if (userInput === "40") {
+                    resultElement.innerHTML = "정답입니다!";
+                } else {
+                    resultElement.innerHTML = "틀렸습니다. 다시 시도해보세요.";
+                    solutionButton.style.display = "block"; // 풀이보기 버튼 표시
+                }
+            }
+
+            function showSolution() {
+                var solutionImage = document.getElementById("solution-image");
+                solutionImage.style.display = "block"; // 이미지 표시
+            }
+        </script>
+    </section>
+</body>
+</html>
